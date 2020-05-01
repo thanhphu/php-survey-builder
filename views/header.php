@@ -1,4 +1,5 @@
 <div id="header">
+  <?php if (! empty($user) && $user instanceof Login): ?>
   <div id="logo">
     <div id="logo_text">
       <h1><a href="index.php"><span class="logo_colour">Survey Builder</span></a></h1>
@@ -7,7 +8,6 @@
   </div>
   <div id="menubar">
     <ul id="menu">
-      <?php if (! empty($user) && $user instanceof Login): ?>
       <li<?php if (in_array(basename($_SERVER['SCRIPT_NAME']), ['index.php'])) {
     echo ' class="selected"';
 } ?>>
@@ -26,11 +26,10 @@
       <li>
         <a href="logout.php">Logout</a>
       </li>
-      <?php else: ?>
       <li>
         <a href="login.php">Login</a>
       </li>
-      <?php endif; ?>
     </ul>
   </div>
+  <?php endif; ?>
 </div>

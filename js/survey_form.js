@@ -46,7 +46,7 @@ function validateForm()
  */
 $(function()
 {
-    $('#submitButton').button().click(function()
+    $('#submitButton').click(function()
     {
         return validateForm();
     });
