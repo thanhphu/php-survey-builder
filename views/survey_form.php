@@ -52,12 +52,12 @@
                       <br />
                     <?php endforeach; ?>
                   <?php elseif ($question->question_type == 'input') : ?>
-                    <div class="mdl-textfield mdl-js-textfield">
-                      <input class="mdl-textfield__input" type="text" name="question_id[<?php echo htmlspecialchars($question->question_id); ?>]" value="" />
+                    <div class="full-width mdl-textfield mdl-js-textfield">
+                      <input class="full-width mdl-textfield__input" type="text" name="question_id[<?php echo htmlspecialchars($question->question_id); ?>]" value="" />
                     </div>
                   <?php elseif ($question->question_type == 'textarea') : ?>
-                    <div class="mdl-textfield mdl-js-textfield">
-                      <textarea class="mdl-textfield__input" type="text" rows="3" name="question_id[<?php echo htmlspecialchars($question->question_id); ?>]"></textarea>
+                    <div class="full-width mdl-textfield mdl-js-textfield">
+                      <textarea class="full-width mdl-textfield__input" type="text" rows="3" name="question_id[<?php echo htmlspecialchars($question->question_id); ?>]"></textarea>
                     </div>
                   <?php endif; ?>
                 </div>

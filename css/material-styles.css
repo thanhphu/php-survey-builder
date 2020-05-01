@@ -245,7 +245,8 @@ html, body {
   color: #fff;
 }
 
-#submitButton {
+#submitButton,
+.full-width {
   width: 100%;
 }
 
