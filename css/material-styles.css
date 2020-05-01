@@ -236,3 +236,23 @@ html, body {
 .mdl-demo .mdl-menu__container {
   z-index: 99;
 }
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  background: rgb(103, 58, 183) center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+#submitButton {
+  width: 100%;
+}
+
+.height-auto {
+  height: auto;
+}
+
+.mdl-card__actions {
+  padding: 40px !important;
+}
