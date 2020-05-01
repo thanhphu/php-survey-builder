@@ -8,9 +8,9 @@
     <div class="mdl-layout--large-screen-only mdl-layout__header-row">
     </div>
     <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-      <a class="mdl-layout__tab <?php if (in_array(basename($_SERVER['SCRIPT_NAME']), ['index.php'])) {
+      <a class="mdl-layout__tab <?php if (in_array(basename($_SERVER['SCRIPT_NAME']), ['home.php'])) {
                                                     echo 'is-active';
-                                                  } ?>" href="index.php">Home</a>
+                                                  } ?>" href="home.php">Home</a>
       <a class="mdl-layout__tab <?php if (in_array(basename($_SERVER['SCRIPT_NAME']), ['user_edit.php', 'users.php'])) {
                                                     echo 'is-active';
                                                   } ?>" href="users.php">Users</a>
