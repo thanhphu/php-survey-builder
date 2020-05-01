@@ -6,7 +6,7 @@
 
 ## Default login
 
-The default login is 'root@localhost' with a password of '12345'. You can add and remove logins from the Users tab.
+The default login is 'admin' with a password of '12345'. You can add and remove logins from the Users tab.
 
 ## Quick Start
 ```sh

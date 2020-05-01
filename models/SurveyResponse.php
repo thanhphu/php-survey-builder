@@ -14,6 +14,7 @@ class SurveyResponse extends Model
 
     // The list of fields in the table
     protected static $fields = [
+        'user_id',
         'survey_response_id',
         'survey_id',
         'time_taken',

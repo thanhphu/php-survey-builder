@@ -1,1 +1,1 @@
-INSERT INTO login (email, password, first_name, last_name) VALUES('root@localhost','$6$rounds=50000$bnRw66ofVOWEqw==$WFXlwWsePKbbC3443nltGu9kPWZgF0.gfCI6lEkMwitsUciOJS9PkqnYMPlMIg699cWlg/EuVvwgI/at2PFNG.', 'System', 'Administrator');
+INSERT INTO login (email, password, first_name, last_name) VALUES('admin','$6$rounds=50000$bnRw66ofVOWEqw==$WFXlwWsePKbbC3443nltGu9kPWZgF0.gfCI6lEkMwitsUciOJS9PkqnYMPlMIg699cWlg/EuVvwgI/at2PFNG.', 'System', 'Administrator');

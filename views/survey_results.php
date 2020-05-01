@@ -24,18 +24,20 @@
       <div id="content">
         <div class="scrollgrid">
           <table class="grid">
-            <tr>
+            <thead>
+              <th>User</th>
               <?php foreach ($survey->questions as $question): ?>
               <th><?php echo htmlspecialchars($question->question_text); ?></th>
               <?php endforeach; ?>
-            </tr>
+            </thead>
             <?php if (empty($survey->responses)): ?>
               <tr>
-                <td colspan="<?php echo count($survey->questions); ?>"><em>No surveys</em></td>
+                <td colspan="<?php echo (count($survey->questions) + 1); ?>"><em>No surveys</em></td>
               </tr>
             <?php else: ?>
             <?php foreach ($survey->responses as $response): ?>
               <tr>
+                <td><?php echo $response->user_id ?></td>
                 <?php foreach ($survey->questions as $question): ?>
                 <td><?php $field = 'question_' . htmlspecialchars($question->question_id); echo htmlspecialchars($response->$field); ?></td>
                 <?php endforeach; ?>

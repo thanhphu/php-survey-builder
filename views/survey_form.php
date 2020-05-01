@@ -24,6 +24,7 @@
           <form id="survey_form" action="survey_form.php" method="post">
             <input type="hidden" id="action" name="action" value="add_survey_response" />
             <input type="hidden" id="survey_id" name="survey_id" value="<?php echo htmlspecialchars($survey->survey_id); ?>" />
+            <input type="hidden" id="user_id" name="user_id" value="<?php echo htmlspecialchars($_REQUEST['user_id']); ?>" />
 
             <?php if (isset($statusMessage)) : ?>
               <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
@@ -43,11 +44,12 @@
                 </div>
                 <div class="mdl-card__actions">
                   <?php if (in_array($question->question_type, ['radio', 'checkbox'])) : ?>
+                    <?php $question_type = $question->question_type ?>
                     <?php foreach ($question->choices as $j => $choice) : ?>
                       <?php $question_html_id = 'choice_' . htmlspecialchars($question->question_id) . '_' . htmlspecialchars($choice->choice_id); ?>
-                      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="<?php echo $question_html_id; ?>">
-                        <input class="mdl-radio__button" id="<?php echo $question_html_id; ?>" type="<?php echo htmlspecialchars($question->question_type); ?>" name="question_id[<?php echo htmlspecialchars($question->question_id); ?>][]" value="<?php echo htmlspecialchars($choice->choice_text); ?>" />
-                        <span class="mdl-radio__label"><?php echo htmlspecialchars($choice->choice_text); ?></span>
+                      <label class="mdl-<?php echo $question_type; ?> mdl-js-ripple-effect" for="<?php echo $question_html_id; ?>">
+                        <input class="mdl-<?php echo $question_type; ?>__button" id="<?php echo $question_html_id; ?>" type="<?php echo htmlspecialchars($question->question_type); ?>" name="question_id[<?php echo htmlspecialchars($question->question_id); ?>][]" value="<?php echo htmlspecialchars($choice->choice_text); ?>" />
+                        <span class="mdl-<?php echo $question_type; ?>__label"><?php echo htmlspecialchars($choice->choice_text); ?></span>
                       </label>
                       <br />
                     <?php endforeach; ?>

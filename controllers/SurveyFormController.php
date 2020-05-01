@@ -49,6 +49,7 @@ class SurveyFormController extends Controller
     protected function getSurvey(&$request)
     {
         if (! empty($request['survey_id'])) {
+
             $survey = Survey::queryRecordById($this->pdo, $request['survey_id']);
             if (! $survey) {
                 throw new Exception('Survey ID not found in database');
@@ -121,6 +122,11 @@ class SurveyFormController extends Controller
         $survey = $this->getSurvey($request);
 
         $surveyResponse = new SurveyResponse;
+        if (!empty($request['user_id'])) {
+            $surveyResponse->user_id = $request['user_id'];
+        } else {
+            $surveyResponse->user_id = '0';
+        }
 
         // Set values on survey response object
         $this->setSurveyResponseValues($survey, $surveyResponse, $request);

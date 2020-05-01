@@ -32,6 +32,7 @@ CREATE TABLE choice (
 CREATE TABLE survey_response (
     survey_response_id SERIAL NOT NULL PRIMARY KEY,
     survey_id INTEGER NOT NULL,
+    user_id TEXT,
     time_taken TEXT,
     FOREIGN KEY (survey_id) REFERENCES survey (survey_id) ON UPDATE CASCADE ON DELETE CASCADE
 );
