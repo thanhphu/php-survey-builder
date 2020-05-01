@@ -52,8 +52,9 @@
                       <br />
                     <?php endforeach; ?>
                   <?php elseif ($question->question_type == 'input') : ?>
-                    <div class="full-width mdl-textfield mdl-js-textfield">
-                      <input class="full-width mdl-textfield__input" type="text" name="question_id[<?php echo htmlspecialchars($question->question_id); ?>]" value="" />
+                    <div class="full-width mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="full-width mdl-textfield__input" type="text" name="question_id[<?php echo htmlspecialchars($question->question_id); ?>]" id="question_id[<?php echo htmlspecialchars($question->question_id); ?>]" value="" />
+                      <label class="mdl-textfield__label" for="question_id[<?php echo htmlspecialchars($question->question_id); ?>]">Text...</label>
                     </div>
                   <?php elseif ($question->question_type == 'textarea') : ?>
                     <div class="full-width mdl-textfield mdl-js-textfield">

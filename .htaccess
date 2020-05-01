@@ -1,0 +1,6 @@
+Options -Indexes
+
+<FilesMatch "\.(sqlite3|htaccess)$">
+Order allow,deny
+Deny from all
+</FilesMatch>
