@@ -119,6 +119,6 @@ function editUser()
  */
 $(function()
 {
-    $('#add_user_button').button().click(addUser);
-    $('.edit_user').button().click(editUser);
+    $('#add_user_button').click(addUser);
+    $('.edit_user').click(editUser);
 });
