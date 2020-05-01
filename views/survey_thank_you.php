@@ -20,7 +20,7 @@
             Thank you for taking the time to complete the survey. Your feedback is very valuable to us.
           </div>
           <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" ahref="/surveys.php">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/surveys.php">
               Close this tab
             </a>
           </div>

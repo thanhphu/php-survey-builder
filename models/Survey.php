@@ -18,6 +18,8 @@ class Survey extends Model
     protected static $fields = [
         'survey_id',
         'survey_name',
+        'survey_id_prompt',
+        'survey_button_prompt'
     ];
 
     /**

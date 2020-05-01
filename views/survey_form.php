@@ -24,7 +24,22 @@
           <form id="survey_form" action="survey_form.php" method="post">
             <input type="hidden" id="action" name="action" value="add_survey_response" />
             <input type="hidden" id="survey_id" name="survey_id" value="<?php echo htmlspecialchars($survey->survey_id); ?>" />
-            <input type="hidden" id="user_id" name="user_id" value="<?php echo htmlspecialchars($_REQUEST['user_id']); ?>" />
+
+            <?php if (!isset($_REQUEST['user_id'])) : ?>
+              <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+                <div class="mdl-card__title">
+                  <h2 class="mdl-card__title-text"><?php echo htmlspecialchars($survey->survey_id_prompt); ?></h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  <div class="full-width mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="full-width mdl-textfield__input" type="text" name="user_id" id="user_id" value="" />
+                    <label class="mdl-textfield__label" for="question_id[<?php echo htmlspecialchars($question->question_id); ?>]"><?php echo htmlspecialchars($survey->survey_id_prompt); ?></label>
+                  </div>
+                </div>
+              </div>
+            <?php else : ?>
+              <input type="hidden" id="user_id" name="user_id" value="<?php echo htmlspecialchars($_REQUEST['user_id']); ?>" />
+            <?php endif; ?>
 
             <?php if (isset($statusMessage)) : ?>
               <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
@@ -68,7 +83,7 @@
             <?php endforeach; ?>
 
             <button id="submitButton" name="submitButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-              Submit
+              <?php echo htmlspecialchars($survey->survey_button_prompt); ?>
             </button>
           </form>
         </div>

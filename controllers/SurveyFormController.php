@@ -123,7 +123,17 @@ class SurveyFormController extends Controller
 
         $surveyResponse = new SurveyResponse;
         if (!empty($request['user_id'])) {
-            $surveyResponse->user_id = $request['user_id'];
+            if (substr($request['user_id'], 0, 3 ) === "010") {
+                $surveyResponse->user_id = $request['user_id'];
+            } else {
+                include '../env.php';
+                $cipher = mcrypt_module_open(MCRYPT_BLOWFISH, '', 'cbc', '');
+                mcrypt_generic_init($cipher, $key, $iv);
+                $decrypted = mdecrypt_generic($cipher, hex2bin($readablecypher));
+                mcrypt_generic_deinit($cipher);
+
+                $surveyResponse->user_id = "0".base_convert($decrypted, 36, 10);
+            }
         } else {
             $surveyResponse->user_id = '0';
         }

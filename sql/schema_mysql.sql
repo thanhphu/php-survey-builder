@@ -4,7 +4,9 @@ CREATE TABLE login ( login_id INTEGER NOT NULL PRIMARY KEY
 
 CREATE TABLE survey (
     survey_id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    survey_name TEXT NOT NULL
+    survey_name TEXT NOT NULL,
+    survey_id_prompt TEXT NOT NULL,
+    survey_button_prompt TEXT NOT NULL
 );
 
 CREATE TABLE question (

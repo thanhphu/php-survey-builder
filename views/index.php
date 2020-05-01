@@ -19,7 +19,7 @@
             This application lets you build a customized survey which you can use to send to people and record their responses. The responses can be viewed and downloaded into an Excel spreadsheet, and you can also view charts of the results.
           </div>
           <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" ahref="/surveys.php">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/surveys.php">
               Get Started
             </a>
           </div>

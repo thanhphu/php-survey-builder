@@ -8,7 +8,9 @@ CREATE TABLE login (
 
 CREATE TABLE survey (
     survey_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    survey_name TEXT NOT NULL
+    survey_name TEXT NOT NULL,
+    survey_id_prompt TEXT NOT NULL,
+    survey_button_prompt TEXT NOT NULL
 );
 
 CREATE TABLE question (

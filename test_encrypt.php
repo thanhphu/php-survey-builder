@@ -1,8 +1,8 @@
 <?php
 
+include 'env.php';
+
 $cc = base_convert('01012355678', 10, 36);
-$key = md5('my secret key');
-$iv = '12345678';
 
 $cipher = mcrypt_module_open(MCRYPT_BLOWFISH,'','cbc','');
 
