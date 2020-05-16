@@ -257,3 +257,8 @@ html, body {
 .mdl-card__actions {
   padding: 40px !important;
 }
+
+.mdl-checkbox__label,
+.mdl-radio__label {
+  font-size: 20px;
+}
