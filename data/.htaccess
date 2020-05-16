@@ -1,0 +1,7 @@
+Options -Indexes
+
+Deny from all
+Require all denied
+
+RewriteEngine On
+RewriteRule .*? - [F]

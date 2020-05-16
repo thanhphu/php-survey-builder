@@ -5,11 +5,11 @@
   <?php include 'stylesheets.php'; ?>
   <link rel="stylesheet" type="text/css" href="vendor/jqplot/jquery.jqplot.min.css" />
   <?php include 'scripts.php'; ?>
-  <script type="text/javascript" src="vendor/jquery/js/jquery-migrate-1.1.1.min.js"></script>
-  <script type="text/javascript" src="vendor/jqplot/jquery.jqplot.min.js"></script>
-  <script type="text/javascript" src="vendor/jqplot/plugins/jqplot.categoryAxisRenderer.min.js"></script>
-  <script type="text/javascript" src="vendor/jqplot/plugins/jqplot.barRenderer.min.js"></script>
-  <script type="text/javascript" src="vendor/jqplot/plugins/jqplot.pointLabels.min.js"></script>
+  <script type="text/javascript" src="/vendor/jquery/js/jquery-migrate-1.1.1.min.js"></script>
+  <script type="text/javascript" src="/vendor/jqplot/jquery.jqplot.min.js"></script>
+  <script type="text/javascript" src="/vendor/jqplot/plugins/jqplot.categoryAxisRenderer.min.js"></script>
+  <script type="text/javascript" src="/vendor/jqplot/plugins/jqplot.barRenderer.min.js"></script>
+  <script type="text/javascript" src="/vendor/jqplot/plugins/jqplot.pointLabels.min.js"></script>
   <script type="text/javascript">
     $(function()
     {

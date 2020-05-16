@@ -5,7 +5,7 @@
   <?php include 'stylesheets-material.php'; ?>
   <?php include 'scripts-material.php'; ?>
   <link href="vendor/jquery/css/smoothness/jquery-ui-1.10.2.custom.min.css" rel="stylesheet" />
-  <script type="text/javascript" src="vendor/jquery/js/jquery-ui-1.10.2.custom.min.js"></script>
+  <script type="text/javascript" src="/vendor/jquery/js/jquery-ui-1.10.2.custom.min.js"></script>
   <script type="text/javascript">
     var loginFields = <?php echo json_encode($loginFields); ?>;
   </script>

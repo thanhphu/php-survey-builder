@@ -4,7 +4,7 @@
 <head>
   <?php include 'stylesheets-material.php'; ?>
   <?php include 'scripts-material.php'; ?>
-  <script type="text/javascript" src="js/survey_form.js"></script>
+  <script type="text/javascript" src="/js/survey_form.js"></script>
 </head>
 
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
@@ -33,7 +33,9 @@
                 <div class="mdl-card__supporting-text">
                   <div class="full-width mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <input class="full-width mdl-textfield__input" type="text" name="user_id" id="user_id" value="" />
-                    <label class="mdl-textfield__label" for="question_id[<?php echo htmlspecialchars($question->question_id); ?>]"><?php echo htmlspecialchars($survey->survey_id_prompt); ?></label>
+                    <label class="mdl-textfield__label" for="user_id">
+                    <?php echo htmlspecialchars($survey->survey_id_prompt); ?>
+                    </label>
                   </div>
                 </div>
               </div>

@@ -1,9 +1,11 @@
 Options -Indexes
 
-<FilesMatch "\.(sqlite3|htaccess)$">
+<FilesMatch "(\.htaccess|sqlite3)$">
 Order allow,deny
 Deny from all
 </FilesMatch>
 
 RewriteEngine On
-RewriteRule ^(.*)$ survey_form.php?params=$1 [NC, QSA]
+
+RewriteRule ^s\/(.*)\/(.*)$ /survey_form.php?survey_id=$1&user_id=$2 [L]
+ 
