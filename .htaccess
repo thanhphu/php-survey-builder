@@ -7,5 +7,5 @@ Deny from all
 
 RewriteEngine On
 RewriteRule ^data/database.sqlite3$ - [F,L]
-RewriteRule ^s\/(.*)\/(.*)$ /survey_form.php?survey_id=$1&user_id=$2 [PT,L]
+RewriteRule ^([0-9]+)\/(.*)$ /survey_form.php?survey_id=$1&user_id=$2 [PT,L]
  
