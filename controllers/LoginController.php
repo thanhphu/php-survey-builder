@@ -34,7 +34,7 @@ class LoginController extends Controller
             if ($success) {
                 $this->createUserSession($login);
 
-                $this->redirect('index.php');
+                $this->redirect('home.php');
             } else {
                 throw new Exception('Invalid e-mail/password. Please try again.');
             }
