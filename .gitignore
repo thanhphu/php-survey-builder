@@ -1,3 +1,4 @@
 env.php
 config/Database.ini
 data/*.sqlite3
+*.txt
