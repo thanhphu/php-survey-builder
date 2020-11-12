@@ -16,3 +16,25 @@ php -S localhost:8080
 ## Troubleshooting
 
 Be sure that your data/ directory is writable by your web server.
+
+## Changes in this fork
+This project was forked from [phpdave11](https://github.com/phpdave11/php-survey-builder) with the following improvements
+* Add material design for user-facing pages
+* Add appropriate ignore to avoid leaking credentials on source control
+* Add default user ID you can set via GET parameter when sending out mass email
+* Stricter .htaccess
+* More readable fonts
+
+## Screenshots
+
+![](docs/1.png)
+Login page
+
+![](docs/2.png)
+Welcome page
+
+![](docs/3.png)
+Survey management page
+
+![](docs/4.png)
+Survey page
